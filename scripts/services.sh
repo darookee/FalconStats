@@ -3,26 +3,9 @@
 # @author   https://www.reddit.com/user/LookAtMyKeyboard
 
 # Declare array of services and pretty human readable names
-declare -a services=(
-"smbd"
-"plexmediaserver"
-"sshguard"
-"rsync"
-"ufw"
-"apcupsd"
-"postgresql"
-"redis-server"
-)
-declare -a serviceName=(
-"Samba"
-"Plex"
-"SSH Guard"
-"RSync"
-"UFW"
-"APC UPS Daemon"
-"PostgreSQL"
-"Redis"
-)
+myDir=$(dirname "$0")
+source "$myDir/config.sh"
+
 declare -a serviceStatus=()
 
 # Get status of all my services
